@@ -1,0 +1,16 @@
+.header {
+    background-color: #7fff00;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .btn {
+    margin-right: 6px;
+  }
+  
+  .loginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

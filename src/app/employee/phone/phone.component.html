@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="tab-pane fade show active external border" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <div *ngIf="wrong" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Wrong number!!!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="close3()"></button>
+      </div>
+      <h5>Sign in with phone:</h5>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label for="phoneNumber" class="form-label">Phone number</label>
+        </div>
+        <div class="col">
+          <input type="tel" name="phoneNumber" [(ngModel)]="number" class="form-control">
+        </div>
+      </div>
+      <div class="row ff" id="sign-in-button">
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary" (click)="phone()">Get OTP</button>
+        </div>
+      </div>
+      <br>
+      <div *ngIf="otp" class="row">
+        <div class="col">
+          <label for="otp" class="form-label" >OTP</label>
+        </div>
+        <div class="col">
+          <input type="text" name="OTP" [(ngModel)]="code" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div *ngIf="otp" class="row">
+        <div class="col">
+          <button class="btn btn-primary" (click)="phone2()">login</button>
+        </div>
+      </div>
+  </div>
+    

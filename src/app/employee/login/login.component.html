@@ -1,0 +1,60 @@
+<div class="header">
+    <h1>Time-Sheet Management System</h1>
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+</div>
+
+<div class="container mt-5">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <!-- errmsg show here -->
+        <div *ngIf="errMsgShow">
+            <p class="text-danger">{{ errMsg }}</p>
+        </div>
+        <div>
+            <h5 style="text-align: center; margin-bottom: 40px">Login As Employee</h5>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter Your Email ID" />
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter Your Password" />
+        </div>
+        <div class="loginButton">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div class="row mt-2">
+            <a (click)="signInWithGoogle()" style="text-decoration: none; cursor: pointer">
+                <div class="card shadow text-center">
+                    <div class="card-body">
+                        <img src="../../../assets/icons8-google-48.png" alt="" height="24px" width="24px" />
+                        Sign In with Google
+                    </div>
+                </div>
+            </a>
+        </div>
+    </form>
+</div>
+<div class="loginButton">
+    <button type="submit" class="btn btn-dark" (click)="phone()">Sign In with Phone</button>
+</div>
+
+<!-- Modal -->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Log In with Your Phone/Mobile Number</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div >
+            <label for="phone" class="m-3">Phone/Mobile Number</label>
+            <input type="text" [(ngModel)]="phoneNumber.country" class="input m-2" placeholder="91" maxlength="2">
+            <input type="text" [(ngModel)]="phoneNumber.area" class="input m-2" placeholder="987" maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.prefix" class="input m-2" placeholder="654" maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.line" class="input m-2" placeholder="3210" maxlength="4">
+            <div class="m-3" id="recaptcha-container"></div>
+            <button class="btn btn-primary" (click)="sendLoginCode()">SMS Text Login Code</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->

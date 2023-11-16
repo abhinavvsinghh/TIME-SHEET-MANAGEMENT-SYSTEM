@@ -1,0 +1,49 @@
+<div class="header">
+    <h1>Time-Sheet Management System</h1>
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+    <button type="button" class="btn btn-info" (click)="view()">View All</button>
+    <button type="button" class="btn btn-danger" (click)="logout()">Log out</button>
+</div>
+
+<div class="container mt-5">
+    <form [formGroup]="timeSheetForm" (ngSubmit)="submit()">
+        <div>
+            <h5 style="text-align: center; margin-bottom: 40px;">Fill the details </h5>
+        </div>
+        <div class="mb-3">
+            <label for="" style="margin: 4px">Type: </label>
+                <input class="form-check-input" name="type" type="radio" value="Work" formControlName="type" (click)="toggle('Work')" >Work
+                <input class="form-check-input" name="type" type="radio" value="Leave"  formControlName="type" (click)="toggle('Leave')" >Leave
+        </div>
+        <div class="mb-3">
+            <label for="">Date:</label>
+            <input type="date" class="form-control" formControlName="date"/>
+        </div>
+        <div class="mb-3">
+            <label for="">Start Time:</label>
+            <input type="time" class="form-control" formControlName="startTime"/>
+        </div>
+        <div class="mb-3">
+            <label for="">End Time:</label>
+            <input type="time" class="form-control" formControlName="endTime"/>
+        </div>
+        <div class="mb-3">
+            <label for="">Description:</label>
+            <input type="text" class="form-control" formControlName="description"/>
+        </div>
+        <div class="loginButton">
+            <button type="submit" class="btn btn-primary" *ngIf="!submitted">Submit</button>
+            <a (click)="reset()" style="text-decoration: none;cursor: pointer;">
+                <div class="btn btn-primary" *ngIf="submitted && !typeLeave">
+                        Reset 
+                </div>
+            </a>
+            <a (click)="leave()" style="text-decoration: none;cursor: pointer;">
+                <div class="btn btn-primary" *ngIf="typeLeave">
+                        Upload Mail 
+                </div>
+            </a>
+        </div>
+    </form>
+
+</div>

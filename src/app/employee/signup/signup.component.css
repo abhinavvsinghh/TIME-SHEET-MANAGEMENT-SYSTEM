@@ -1,0 +1,19 @@
+.header {
+    background-color: #7fff00;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+.container {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "time-sheet-management-sy-71bc9"
+  },
+  "targets": {
+    "time-sheet-management-sy-71bc9": {
+      "hosting": {
+        "time-sheet": [
+          "time-sheet-management-sy"
+        ]
+      }
+    }
+  }
+}
